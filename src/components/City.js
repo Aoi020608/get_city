@@ -39,7 +39,7 @@ const City = () => {
   );
 
   return (
-    <div>
+    <CityStyled>
       <h1>Search City!</h1>
       <SearchBarStyled>
         <Button
@@ -64,9 +64,18 @@ const City = () => {
       </SearchBarStyled>
 
       {city && city.map((c) => <CardCity cityName={c} />)}
-    </div>
+    </CityStyled>
   );
 };
+
+const CityStyled = styled.div`
+  text-align: center;
+
+  h1 {
+    text-font: bold;
+    
+  }
+`;
 
 const SearchBarStyled = styled.div`
   display: flex;

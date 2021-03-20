@@ -9,6 +9,7 @@ const cityReducer = (state = {initialState}, action) => {
     switch(action.type) {
         case "FETCH_CITY": 
             return {
+                ...state,
                 city: action.payload.city
             }
 
@@ -21,6 +22,7 @@ const cityReducer = (state = {initialState}, action) => {
 
         case "SELECT_CITY": 
             return {
+                ...state,
                 selectCityId: action.payload.selectCityId,
             }
 

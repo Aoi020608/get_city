@@ -7,7 +7,7 @@ const CardCity = ({ cityName }) => {
   return (
     <div>
       <Row>
-        <Col span={4}>
+        <Col span={12} offset={6}>
           <Card title={cityName}></Card>
         </Col>
       </Row>
