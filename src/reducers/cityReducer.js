@@ -1,5 +1,8 @@
 const initialState = {
+    listCityId: [], 
+    listCityName: [],
     city: [], 
+    selectCityId: null, 
 }
 
 const cityReducer = (state = {initialState}, action) => {
@@ -7,6 +10,18 @@ const cityReducer = (state = {initialState}, action) => {
         case "FETCH_CITY": 
             return {
                 city: action.payload.city
+            }
+
+        case "GET_ALL_CITYNAME":
+            return {
+                ...state,
+                listCityId: action.payload.listCityId, 
+                listCityName: action.payload.listCityName,
+            }
+
+        case "SELECT_CITY": 
+            return {
+                selectCityId: action.payload.selectCityId,
             }
 
         default:

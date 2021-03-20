@@ -1,56 +1,78 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import CardCity from "../components/CardCity";
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCity } from "../actions/cityAction";
+import {
+  fetchCity,
+  getAllCityName,
+  selectCityName,
+} from "../actions/cityAction";
 //antd
-import { Select } from "antd";
-import listCity from "../prefectureList.json";
+import { Button, Select } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
+import styled from "styled-components";
 
 const City = () => {
   const dispatch = useDispatch();
-  const [cityName, setCistyName] = useState([]);
-  const [cityId, setCityId] = useState([]);
-  const [cityLength, setCityLength] = useState(0);
   const { Option } = Select;
 
-  useEffect(() => {
-    const temName = [];
-    const temId = [];
-    for (let i = 0; i < listCity.length; i++) {
-      temId.push(listCity[i].id);
-      temName.push(listCity[i].name);
-    }
-    setCityId(temId);
-    setCistyName(temName);
-  }, []);
+  useEffect(() => dispatch(getAllCityName()), []);
 
-  const getCity = () => {
-    dispatch(fetchCity());
+  const getOitaPrefecture = () => {
+    dispatch(fetchCity(44));
   };
 
-  const selectName = (value) => {
-    for (let i = 0; listCity.length; i++) {
-      if (listCity[i].name === value) {
-        setCityId(listCity[i].id);
-      }
+  const selectName = (city_name) => {
+    dispatch(selectCityName(city_name));
+  };
+
+  const getCityName = () => {
+    if (selectCityId === undefined) {
+      alert("Please select city!");
+    } else {
+      dispatch(fetchCity(selectCityId));
     }
   };
 
-  const { city } = useSelector((state) => state.city);
-  console.log(city);
+  const { listCityId, listCityName, city, selectCityId } = useSelector(
+    (state) => state.city
+  );
 
   return (
     <div>
-      <h1>Oita-Ken</h1>
-      <button onClick={getCity}>Get Oita</button>
-      {city && city.map((c) => <p>{c}</p>)}
-      <Select showSearch placeholder="Select a city" onChange={selectName}>
-        {cityName.map((n) => (
-          <Option value={n}>{n}</Option>
-        ))}
-      </Select>
+      <h1>Search City!</h1>
+      <SearchBarStyled>
+        <Button
+          type="primary"
+          icon={<SearchOutlined />}
+          onClick={getOitaPrefecture}
+        >
+          大分県
+        </Button>
+        <Select
+          showSearch
+          placeholder="都道府県を選択してください"
+          style={{ width: "15rem" }}
+          onChange={selectName}
+        >
+          {listCityName &&
+            listCityName.map((n) => <Option value={n}>{n}</Option>)}
+        </Select>
+        <Button type="primary" icon={<SearchOutlined />} onClick={getCityName}>
+          検索
+        </Button>
+      </SearchBarStyled>
+
+      {city && city.map((c) => <CardCity cityName={c} />)}
     </div>
   );
 };
+
+const SearchBarStyled = styled.div`
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-around;
+`;
 
 export default City;

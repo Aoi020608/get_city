@@ -1,5 +1,5 @@
-const base_url = "https://www.land.mlit.go.jp/webland/api/CitySearch?area=44";
+const base_url = "https://www.land.mlit.go.jp/webland/api/CitySearch?area=";
 
-const getCityUrl = (id) => `${base_url}${id}`;
+const getCityUrl = (city_id) => base_url + city_id;
 
-export default base_url;
+export default getCityUrl;

@@ -1,9 +1,12 @@
 import axios from "axios";
-import base_url from "../api";
+import getCityUrl from "../api";
 
-export const fetchCity = () => async (dispatch) => {
+import listCity from "../prefectureList.json";
+
+export const fetchCity = (city_id) => async (dispatch) => {
   //fetch axios
-  const city = await axios.get(base_url);
+  const city = await axios.get(getCityUrl(city_id));
+  console.log(city);
   const object = city.data.data;
   const cityObject = [];
   for (let i = 0; i < object.length; i++) {
@@ -17,4 +20,33 @@ export const fetchCity = () => async (dispatch) => {
       city: cityObject,
     },
   });
+};
+
+export const getAllCityName = () => (dispatch) => {
+  const temName = [];
+  const temId = [];
+  for (let i = 0; i < listCity.length; i++) {
+    temId.push(listCity[i].id);
+    temName.push(listCity[i].name);
+  }
+  dispatch({
+    type: "GET_ALL_CITYNAME",
+    payload: {
+      listCityId: temId,
+      listCityName: temName,
+    },
+  });
+};
+
+export const selectCityName = (cityName) => (dispatch) => {
+  for (let i = 0; i < listCity.length; i++) {
+    if (listCity[i].name === cityName) {
+      dispatch({
+        type: "SELECT_CITY", 
+        payload: {
+          selectCityId: listCity[i].id,
+        }
+      })
+    }
+  }
 };
