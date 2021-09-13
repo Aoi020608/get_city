@@ -1,9 +1,14 @@
+import { Dispatch } from "redux";
 import axios from "axios";
 import getCityUrl from "../api";
 
 import listCity from "../prefectureList.json";
 
-export const fetchCity = (city_id) => async (dispatch) => {
+// interface Props {
+//   dispatch : Dispatch<{}>
+//  }
+
+export const fetchCity = (city_id: number) => async (dispatch: any) => {
   //fetch axios
   const city = await axios.get(getCityUrl(city_id));
   console.log(city);
@@ -22,7 +27,7 @@ export const fetchCity = (city_id) => async (dispatch) => {
   });
 };
 
-export const getAllCityName = () => (dispatch) => {
+export const getAllCityName = () => (dispatch: any) => {
   const temName = [];
   const temId = [];
   for (let i = 0; i < listCity.length; i++) {
@@ -38,15 +43,15 @@ export const getAllCityName = () => (dispatch) => {
   });
 };
 
-export const selectCityName = (cityName) => (dispatch) => {
+export const selectCityName = (cityName: string) => (dispatch: any) => {
   for (let i = 0; i < listCity.length; i++) {
     if (listCity[i].name === cityName) {
       dispatch({
-        type: "SELECT_CITY", 
+        type: "SELECT_CITY",
         payload: {
           selectCityId: listCity[i].id,
-        }
-      })
+        },
+      });
     }
   }
 };
