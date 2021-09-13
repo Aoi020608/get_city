@@ -5,4 +5,6 @@ const rootReducer = combineReducers({
     city: cityReducer,
 })
 
+export type RootReducer = ReturnType<typeof rootReducer>
+
 export default rootReducer;

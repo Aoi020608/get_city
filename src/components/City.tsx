@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import CardCity from "../components/CardCity";
+import CardCity from "./CardCity";
 //redux
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
 import {
   fetchCity,
   getAllCityName,
@@ -22,7 +22,7 @@ const City = () => {
     dispatch(fetchCity(44));
   };
 
-  const selectName = (city_name) => {
+  const selectName = (city_name: string) => {
     dispatch(selectCityName(city_name));
   };
 
@@ -34,8 +34,8 @@ const City = () => {
     }
   };
 
-  const { listCityId, listCityName, city, selectCityId } = useSelector(
-    (state) => state.city
+  const { listCityName, city, selectCityId } = useSelector(
+    (state: RootStateOrAny) => state.city
   );
 
   return (
@@ -56,14 +56,14 @@ const City = () => {
           onChange={selectName}
         >
           {listCityName &&
-            listCityName.map((n) => <Option value={n}>{n}</Option>)}
+            listCityName.map((n: string) => <Option value={n}>{n}</Option>)}
         </Select>
         <Button type="primary" icon={<SearchOutlined />} onClick={getCityName}>
           検索
         </Button>
       </SearchBarStyled>
 
-      {city && city.map((c) => <CardCity cityName={c} />)}
+      {city && city.map((c: string) => <CardCity cityName={c} />)}
     </CityStyled>
   );
 };
@@ -73,7 +73,6 @@ const CityStyled = styled.div`
 
   h1 {
     text-font: bold;
-    
   }
 `;
 
