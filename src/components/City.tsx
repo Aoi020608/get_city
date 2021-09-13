@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import CardCity from "./CardCity";
 //redux
 import { useDispatch, useSelector, RootStateOrAny } from "react-redux";
-import {
-  fetchCity,
-  getAllCityName,
-  selectCityName,
-} from "../actions/cityAction";
+import { fetchCity, selectCityName } from "../actions/cityAction";
 //antd
 import { Button, Select } from "antd";
 import { SearchOutlined } from "@ant-design/icons";

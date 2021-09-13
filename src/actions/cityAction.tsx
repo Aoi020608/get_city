@@ -1,4 +1,3 @@
-import { Dispatch } from "redux";
 import axios from "axios";
 import getCityUrl from "../api";
 
