@@ -1,9 +1,12 @@
 import React from "react";
 
 import { Card, Col, Row } from "antd";
-import styled from "styled-components";
 
-const CardCity = ({ cityName }) => {
+interface CardCityProps {
+  cityName: string;
+}
+
+const CardCity: React.FC<CardCityProps> = ({ cityName }) => {
   return (
     <div>
       <Row>
