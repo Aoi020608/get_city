@@ -16,7 +16,7 @@ const City = () => {
   const dispatch = useDispatch();
   const { Option } = Select;
 
-  useEffect(() => dispatch(getAllCityName()), []);
+  // useEffect(() => dispatch(getAllCityName()), []);
 
   const getOitaPrefecture = () => {
     dispatch(fetchCity(44));
