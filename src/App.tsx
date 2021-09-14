@@ -6,6 +6,7 @@ import Number from "./components/Number";
 import City from "./components/City";
 import MainFeaturedPost from "./components/MainFeatured";
 import FeaturedPost from "./components/FeaturedPost";
+import Footer from "./components/Footer";
 
 const featuredPosts = [
   {
@@ -38,7 +39,10 @@ const App = () => {
           ))}
         </Grid>
       </main>
-
+      <Footer
+        title="Footer"
+        description="Something here to give the footer a purpose!"
+      />
       <Number />
       <City />
     </div>
