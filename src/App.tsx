@@ -4,15 +4,19 @@ import Nav from "./components/Nav";
 import Number from "./components/Number";
 import City from "./components/City";
 import MainFeaturedPost from "./components/MainFeatured";
+import { Container } from "@material-ui/core";
 
 function App() {
   return (
-    <div className="App">
+    <Container maxWidth="lg">
       <Nav />
-      <MainFeaturedPost />
+      <main>
+        <MainFeaturedPost />
+      </main>
+
       <Number />
       <City />
-    </div>
+    </Container>
   );
 }
 
