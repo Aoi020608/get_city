@@ -1,10 +1,15 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
+import { Switch, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import MainFeaturedPost from "./components/MainFeatured";
 import FeaturedPost from "./components/FeaturedPost";
+import Blog from "./components/Blog";
 import Footer from "./components/Footer";
+import post1 from "./blog-post1.md";
+import post2 from "./blog-post2.md";
+import post3 from "./blog-post3.md";
 
 const featuredPosts = [
   {
@@ -25,17 +30,27 @@ const featuredPosts = [
   },
 ];
 
+const posts = [post1, post2, post3];
+
 function App() {
+  // const location = useLocation();  
   return (
     <div>
       <Header />
       <main style={{ padding: "1rem" }}>
-        <MainFeaturedPost />
-        <Grid container spacing={4}>
-          {featuredPosts.map((post) => (
-            <FeaturedPost key={post.title} post={post} />
-          ))}
-        </Grid>
+        <Switch>
+          <Route path="/" exact>
+            <MainFeaturedPost />
+            <Grid container spacing={4}>
+              {featuredPosts.map((post) => (
+                <FeaturedPost key={post.title} post={post} />
+              ))}
+            </Grid>
+          </Route>
+          <Route path="/blog" exact>
+            <Blog title="From the firehose" posts={posts} />
+          </Route>
+        </Switch>
       </main>
       <Footer
         title="Footer"
