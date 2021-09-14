@@ -39,7 +39,7 @@ const Footer = (props: FooterProps) => {
       component="footer"
       sx={{ bgcolor: "background.paper", py: 6 }}
     >
-      <Container maxWidth="lg" className={classes.footerContainer}>
+      <Container className={classes.footerContainer}>
         <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>

@@ -1,9 +1,7 @@
 import React from "react";
-import { Container, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 import Header from "./components/Header";
-import Number from "./components/Number";
-import City from "./components/City";
 import MainFeaturedPost from "./components/MainFeatured";
 import FeaturedPost from "./components/FeaturedPost";
 import Footer from "./components/Footer";
@@ -31,7 +29,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <main>
+      <main style={{ padding: "1rem" }}>
         <MainFeaturedPost />
         <Grid container spacing={4}>
           {featuredPosts.map((post) => (
@@ -43,8 +41,8 @@ const App = () => {
         title="Footer"
         description="Something here to give the footer a purpose!"
       />
-      <Number />
-      <City />
+      {/* <Number />
+      <City /> */}
     </div>
   );
 };
