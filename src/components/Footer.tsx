@@ -35,25 +35,28 @@ const Footer = (props: FooterProps) => {
   const { description, title } = props;
 
   return (
-    <Box
-      component="footer"
-      sx={{ bgcolor: "background.paper", py: 6 }}
-    >
-      <Container className={classes.footerContainer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          {title}
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          {description}
-        </Typography>
-        <Copyright />
-      </Container>
-    </Box>
+    <div>
+      <Box
+        component="footer"
+        sx={{ bgcolor: "background.paper", py: 6 }}
+        style={{ paddingBottom: 0 }}
+      >
+        <Container className={classes.footerContainer}>
+          <Typography variant="h6" align="center" gutterBottom>
+            {title}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="text.secondary"
+            component="p"
+          >
+            {description}
+          </Typography>
+          <Copyright />
+        </Container>
+      </Box>
+    </div>
   );
 };
 
