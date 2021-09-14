@@ -44,7 +44,7 @@ const Nav: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <Grid container spacing={3}>
             <Grid sm={3} className={classes.titleContainer}>
