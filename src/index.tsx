@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 //import antd css
 import "antd/dist/antd.css";
+import { BrowserRouter } from "react-router-dom";
 
 const composeEnhancers =
   (typeof window !== "undefined" &&
@@ -22,7 +23,9 @@ const store = createStore(
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

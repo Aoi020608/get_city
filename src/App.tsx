@@ -33,12 +33,12 @@ const featuredPosts = [
 const posts = [post1, post2, post3];
 
 function App() {
-  // const location = useLocation();  
+  const location = useLocation();    
   return (
     <div>
       <Header />
       <main style={{ padding: "1rem" }}>
-        <Switch>
+        <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
             <MainFeaturedPost />
             <Grid container spacing={4}>
