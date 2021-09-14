@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Nav: React.FC = () => {
+const Header: React.FC = () => {
   const classes = useStyles();
 
   return (
@@ -92,4 +92,4 @@ const Nav: React.FC = () => {
   );
 };
 
-export default Nav;
+export default Header;

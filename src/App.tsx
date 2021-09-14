@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid } from "@material-ui/core";
 
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Number from "./components/Number";
 import City from "./components/City";
 import MainFeaturedPost from "./components/MainFeatured";
@@ -29,7 +29,7 @@ const featuredPosts = [
 const App = () => {
   return (
     <div>
-      <Nav />
+      <Header />
       <main>
         <MainFeaturedPost />
         <Grid container spacing={4}>
