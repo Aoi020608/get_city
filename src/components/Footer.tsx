@@ -1,8 +1,16 @@
 import * as React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+
+const useStyles = makeStyles((theme) => ({
+  footerContainer: {
+    padding: "48px 0px",
+    backgroundColor: "#424242",
+  },
+}));
 
 function Copyright() {
   return (
@@ -23,11 +31,15 @@ interface FooterProps {
 }
 
 const Footer = (props: FooterProps) => {
+  const classes = useStyles();
   const { description, title } = props;
 
   return (
-    <Box component="footer" sx={{ bgcolor: "background.paper", py: 6 }}>
-      <Container maxWidth="lg">
+    <Box
+      component="footer"
+      sx={{ bgcolor: "background.paper", py: 6 }}
+    >
+      <Container maxWidth="lg" className={classes.footerContainer}>
         <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>
