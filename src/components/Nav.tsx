@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Grid } from "@material-ui/core";
+import { Grid, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,11 +16,25 @@ const useStyles = makeStyles((theme: Theme) =>
     toolbar: {
       backgroundColor: "white",
     },
+    titleContainer: {
+      display: "flex",
+      alignItems: "center",
+    },
     menuButton: {
       marginRight: theme.spacing(2),
     },
+    menuContainer: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-evenly",
+    },
     title: {
       //   flexGrow: 1,
+    },
+    loginContainer: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-evenly",
     },
   })
 );
@@ -33,7 +47,7 @@ const Nav: React.FC = () => {
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
           <Grid container spacing={3}>
-            <Grid sm={3}>
+            <Grid sm={3} className={classes.titleContainer}>
               <IconButton
                 edge="start"
                 className={classes.menuButton}
@@ -42,17 +56,34 @@ const Nav: React.FC = () => {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h6" className={classes.title}>
+              <Typography variant="h5" className={classes.title}>
                 FinTech
               </Typography>
             </Grid>
-            <Grid sm={6}>
+            <Grid sm={6} className={classes.menuContainer}>
               <Typography variant="button" color="textSecondary">
-                PRODUCTS
+                <Link component="button" variant="body2">
+                  PRODUCTS
+                </Link>
+              </Typography>
+              <Typography variant="button" color="textSecondary">
+                <Link component="button" variant="body2">
+                  PRICE
+                </Link>
+              </Typography>
+              <Typography variant="button" color="textSecondary">
+                <Link component="button" variant="body2">
+                  COMPANY
+                </Link>
               </Typography>
             </Grid>
-            <Grid sm={3}>
-              <Button color="primary">Login</Button>
+            <Grid sm={3} className={classes.loginContainer}>
+              <Button color="primary" variant="outlined">
+                GET STARTED
+              </Button>
+              <Button color="primary" variant="outlined">
+                SIGNIN
+              </Button>
             </Grid>
           </Grid>
         </Toolbar>
