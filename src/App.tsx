@@ -25,7 +25,7 @@ const featuredPosts = [
   },
 ];
 
-const App = () => {
+function App() {
   return (
     <div>
       <Header />
@@ -45,6 +45,6 @@ const App = () => {
       <City /> */}
     </div>
   );
-};
+}
 
 export default App;
