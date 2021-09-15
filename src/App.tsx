@@ -13,6 +13,7 @@ import ComponentName from "./components/Markdown2";
 import News from "./pages/News";
 import Price from "./pages/Price";
 import Aboutus from "./pages/Aboutus";
+import SignIn from "./pages/SignIn";
 
 const featuredPosts = [
   {
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/aboutus" exact>
             <Aboutus />
+          </Route>
+          <Route path="/signin" exact>
+            <SignIn />
           </Route>
         </Switch>
       </main>
