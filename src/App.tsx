@@ -10,7 +10,7 @@ import post1 from "./blog-post1.md";
 import post2 from "./blog-post2.md";
 import post3 from "./blog-post3.md";
 import ComponentName from "./components/Markdown2";
-import News from "./pages/news";
+import News from "./pages/News";
 import Price from "./pages/Price";
 import Aboutus from "./pages/Aboutus";
 
