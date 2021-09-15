@@ -5,7 +5,6 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import MainFeaturedPost from "./components/MainFeatured";
 import FeaturedPost from "./components/FeaturedPost";
-import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import post1 from "./blog-post1.md";
 import post2 from "./blog-post2.md";
@@ -49,7 +48,6 @@ function App() {
             </Grid>
           </Route>
           <Route path="/blog" exact>
-            {/* <Blog title="From the firehose" posts={posts}  postContent={post1}/> */}
             <ComponentName />
           </Route>
         </Switch>
