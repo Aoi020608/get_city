@@ -47,10 +47,10 @@ function App() {
                 <FeaturedPost key={post.title} post={post} />
               ))}
             </Grid>
-            <ComponentName />
           </Route>
           <Route path="/blog" exact>
-            <Blog title="From the firehose" posts={posts}  postContent={post1}/>
+            {/* <Blog title="From the firehose" posts={posts}  postContent={post1}/> */}
+            <ComponentName />
           </Route>
         </Switch>
       </main>
