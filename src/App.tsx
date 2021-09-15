@@ -58,8 +58,6 @@ function App() {
         title="Footer"
         description="Something here to give the footer a purpose!"
       />
-      {/* <Number />
-      <City /> */}
     </div>
   );
 }
