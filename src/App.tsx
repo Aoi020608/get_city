@@ -33,7 +33,7 @@ const featuredPosts = [
 const posts = [post1, post2, post3];
 
 function App() {
-  const location = useLocation();    
+  const location = useLocation();
   return (
     <div>
       <Header />

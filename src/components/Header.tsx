@@ -57,7 +57,7 @@ const Header: React.FC = () => {
                 <MenuIcon />
               </IconButton>
               <Typography variant="h5" className={classes.title}>
-                FinTech
+                BLOCKTECH
               </Typography>
             </Grid>
             <Grid sm={6} className={classes.menuContainer}>

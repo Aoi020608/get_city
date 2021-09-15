@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   footerContainer: {
     padding: "48px 0px",
     backgroundColor: "#424242",
+    maxWidth: "100%",
   },
 }));
 
@@ -39,9 +40,9 @@ const Footer = (props: FooterProps) => {
       <Box
         component="footer"
         sx={{ bgcolor: "background.paper", py: 6 }}
-        style={{ paddingBottom: 0 }}
+        style={{ padding: "3rem", backgroundColor: "lavender" }}
       >
-        <Container className={classes.footerContainer}>
+        
           <Typography variant="h6" align="center" gutterBottom>
             {title}
           </Typography>
@@ -54,7 +55,7 @@ const Footer = (props: FooterProps) => {
             {description}
           </Typography>
           <Copyright />
-        </Container>
+        
       </Box>
     </div>
   );
