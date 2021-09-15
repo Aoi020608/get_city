@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography } from "@mui/material/";
+import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@mui/material/Divider";
 import showdown from "showdown";
 import parse from "html-react-parser";
 import readme from "../blog-post1.md";
 
+const useStyles = makeStyles((theme) => ({
+    blogContainer: {
+        padding: "0 10rem",
+    }
+  }));
+
 export default function ComponentName() {
+    const classes = useStyles();
   const [html, setHTML] = useState("");
 
   //Use componentDidMount(): if class based component to load md file
@@ -22,6 +30,7 @@ export default function ComponentName() {
     <Grid
       item
       style={{ marginTop: "4rem"}}
+      className={classes.blogContainer}
     >
       <Typography variant="h6" gutterBottom>
         Title
