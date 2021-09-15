@@ -65,18 +65,18 @@ const Header: React.FC = () => {
             </Grid>
             <Grid sm={6} className={classes.menuContainer}>
               <Typography variant="button" color="textSecondary">
-                <Link to="/products">
-                  PRODUCTS
+                <Link to="/news">
+                  NEWS
                 </Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link to="/products">
+                <Link to="/price">
                   PRICE
                 </Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link to="/products">
-                  COMPANY
+                <Link to="/aboutus">
+                  ABOUT US
                 </Link>
               </Typography>
             </Grid>
