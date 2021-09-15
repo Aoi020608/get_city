@@ -48,7 +48,7 @@ function App() {
             </Grid>
           </Route>
           <Route path="/blog" exact>
-            <Blog title="From the firehose" posts={posts} />
+            <Blog title="From the firehose" posts={posts}  postContent={post1}/>
           </Route>
         </Switch>
       </main>

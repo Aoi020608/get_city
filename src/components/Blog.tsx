@@ -6,6 +6,7 @@ import Markdown from "./Markdown";
 
 interface MainProps {
   posts: ReadonlyArray<string>;
+  postContent: string,
   title: string;
 }
 
@@ -28,11 +29,11 @@ function Blog(props: MainProps) {
         {title}
       </Typography>
       <Divider />
-      {posts.map((post) => (
-      <Markdown className="markdown" key={post.substring(0, 40)}>
-        {post}
+      
+      <Markdown className="markdown" >
+        {props.postContent}
       </Markdown>
-      ))}
+    
     </Grid>
   );
 }
