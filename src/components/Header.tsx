@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -6,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Grid, Link } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,6 +31,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       //   flexGrow: 1,
+      outline: "none",
+      color: "black",
     },
     loginContainer: {
       display: "flex",
@@ -56,23 +59,23 @@ const Header: React.FC = () => {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h5" className={classes.title}>
-                BLOCKTECH
+              <Typography variant="h5" >
+                <Link to="/" className={classes.title}>BLOCKTECH</Link>
               </Typography>
             </Grid>
             <Grid sm={6} className={classes.menuContainer}>
               <Typography variant="button" color="textSecondary">
-                <Link component="button" variant="body2">
+                <Link to="/products">
                   PRODUCTS
                 </Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link component="button" variant="body2">
+                <Link to="/products">
                   PRICE
                 </Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link component="button" variant="body2">
+                <Link to="/products">
                   COMPANY
                 </Link>
               </Typography>

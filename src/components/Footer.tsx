@@ -40,7 +40,7 @@ const Footer = (props: FooterProps) => {
       <Box
         component="footer"
         sx={{ bgcolor: "background.paper", py: 6 }}
-        style={{ padding: "3rem", backgroundColor: "lavender" }}
+        style={{ padding: "5rem", backgroundColor: "lavender" }}
       >
         
           <Typography variant="h6" align="center" gutterBottom>
