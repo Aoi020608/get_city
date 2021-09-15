@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import post1 from "./blog-post1.md";
 import post2 from "./blog-post2.md";
 import post3 from "./blog-post3.md";
+import ComponentName from "./components/Markdown2";
 
 const featuredPosts = [
   {
@@ -46,6 +47,7 @@ function App() {
                 <FeaturedPost key={post.title} post={post} />
               ))}
             </Grid>
+            <ComponentName />
           </Route>
           <Route path="/blog" exact>
             <Blog title="From the firehose" posts={posts}  postContent={post1}/>
