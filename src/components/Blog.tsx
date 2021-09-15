@@ -10,7 +10,7 @@ interface MainProps {
 }
 
 function Blog(props: MainProps) {
-  const { posts, title } = props;
+  const { title, posts } = props;
 
   return (
     <Grid
@@ -22,15 +22,16 @@ function Blog(props: MainProps) {
           py: 3,
         },
       }}
+      style={{marginTop: "4rem"}}
     >
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <Markdown className="markdown" key={post.substring(0, 40)}>
-          {post}
-        </Markdown>
+      <Markdown className="markdown" key={post.substring(0, 40)}>
+        {post}
+      </Markdown>
       ))}
     </Grid>
   );
