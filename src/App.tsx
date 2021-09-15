@@ -14,6 +14,7 @@ import News from "./pages/News";
 import Price from "./pages/Price";
 import Aboutus from "./pages/Aboutus";
 import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 const featuredPosts = [
   {
@@ -65,6 +66,9 @@ function App() {
           </Route>
           <Route path="/signin" exact>
             <SignIn />
+          </Route>
+          <Route path="/signup" exact>
+            <SignUp />
           </Route>
         </Switch>
       </main>
