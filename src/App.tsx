@@ -15,6 +15,7 @@ import Price from "./pages/Price";
 import Aboutus from "./pages/Aboutus";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import ForGotPassword from "./pages/ForgotPassword";
 
 const featuredPosts = [
   {
@@ -69,6 +70,9 @@ function App() {
           </Route>
           <Route path="/signup" exact>
             <SignUp />
+          </Route>
+          <Route path="/forgot-password" exact>
+            <ForGotPassword />
           </Route>
         </Switch>
       </main>
