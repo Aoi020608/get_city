@@ -12,7 +12,7 @@ import post3 from "./blog-post3.md";
 import ComponentName from "./components/Markdown2";
 import News from "./pages/News";
 import Price from "./pages/Price";
-import Aboutus from "./pages/Aboutus";
+import Aboutme from "./pages/Aboutme";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ForGotPassword from "./pages/ForgotPassword";
@@ -63,7 +63,7 @@ function App() {
             <Price />
           </Route>
           <Route path="/aboutus" exact>
-            <Aboutus />
+            <Aboutme />
           </Route>
           <Route path="/signin" exact>
             <SignIn />
