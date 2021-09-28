@@ -56,7 +56,7 @@ function App() {
           <Route path="/blog" exact>
             <ComponentName />
           </Route>
-          <Route path="/news" exact>
+          <Route path="/works" exact>
             <News />
           </Route>
           <Route path="/price" exact>
