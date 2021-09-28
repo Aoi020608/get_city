@@ -1,9 +1,9 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
@@ -17,8 +17,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" to="/">
+        AOI
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -36,28 +36,25 @@ const Footer = (props: FooterProps) => {
   const { description, title } = props;
 
   return (
-    <div>
-      <Box
-        component="footer"
-        sx={{ bgcolor: "background.paper", py: 6 }}
-        style={{ padding: "5rem", backgroundColor: "lavender" }}
+    <Box
+      component="footer"
+      sx={{ bgcolor: "background.paper", py: 6 }}
+      style={{ backgroundColor: "lavender", position: "fixed", bottom: 0, width: "100%" }}
+      className={classes.footerContainer}
+    >
+      <Typography variant="h6" align="center" gutterBottom>
+        {title}
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        align="center"
+        color="text.secondary"
+        component="p"
       >
-        
-          <Typography variant="h6" align="center" gutterBottom>
-            {title}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            color="text.secondary"
-            component="p"
-          >
-            {description}
-          </Typography>
-          <Copyright />
-        
-      </Box>
-    </div>
+        {description}
+      </Typography>
+      <Copyright />
+    </Box>
   );
 };
 
