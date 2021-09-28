@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
+import { Button } from "@mui/material";
+
+import image1 from "../assets/img/mountain.jpg"
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -11,12 +14,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: "url(https://source.unsplash.com/random)",
+    backgroundImage:
+      `url(https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?cs=srgb&dl=pexels-denis-linine-714258.jpg&fm=jpg)`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     marginTop: "4rem",
-    height: "25rem",
+    height: "36rem",
   },
   overlay: {
     position: "absolute",
@@ -34,6 +38,12 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: 0,
     },
   },
+  buttonContainer: {
+    padding: "5rem",
+  },
+  button: {
+    padding: "1rem 6rem",
+  }
 }));
 
 const MainFeaturedPost: React.FC = () => {
@@ -43,13 +53,15 @@ const MainFeaturedPost: React.FC = () => {
   return (
     <Paper
       className={classes.mainFeaturedPost}
-      style={{ backgroundImage: `url(https://source.unsplash.com/random` }}
+      style={{
+        backgroundImage: `url(https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?cs=srgb&dl=pexels-denis-linine-714258.jpg&fm=jpg`,
+      }}
     >
       {/* Increase the priority of the hero background image */}
       {
         <img
           style={{ display: "none" }}
-          src="https://source.unsplash.com/random"
+          src="https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?cs=srgb&dl=pexels-denis-linine-714258.jpg&fm=jpg"
           alt="description"
         />
       }
@@ -65,17 +77,28 @@ const MainFeaturedPost: React.FC = () => {
             >
               AOI KUROKAWA
             </Typography>
-            {/* <Typography variant="h5" color="inherit" paragraph>
-              Multiple lines of text that form the lede, informing new readers
-              quickly and efficiently about what's most interesting in this
-              post's contents.
+            <hr></hr>
+            <Typography variant="h5" color="inherit" paragraph>
+              - Developer
+            </Typography>
+            <Typography variant="h5" color="inherit" paragraph>
+              - Researcher
+            </Typography>
+            {/* <Typography variant="h6" color="inherit" paragraph>
+              
             </Typography> */}
-            <Link variant="subtitle1" href="#">
-              Explore
-            </Link>
+            <div className={classes.buttonContainer}>
+              <Link to="/">
+                <Button variant="contained" style={{padding: "1rem 6rem"}}>Explore</Button>
+              </Link>
+            </div>
           </div>
         </Grid>
       </Grid>
+
+      {/* <Link to="/news"> */}
+      {/* <button>Explore</button> */}
+      {/* </Link> */}
     </Paper>
   );
 };
