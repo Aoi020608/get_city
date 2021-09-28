@@ -5,8 +5,9 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { Button } from "@mui/material";
+import { BsHash } from "react-icons/bs";
 
-import image1 from "../assets/img/mountain.jpg"
+import image1 from "../assets/img/mountain.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -14,8 +15,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage:
-      `url(https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?cs=srgb&dl=pexels-denis-linine-714258.jpg&fm=jpg)`,
+    backgroundImage: `url(https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?cs=srgb&dl=pexels-denis-linine-714258.jpg&fm=jpg)`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     padding: "1rem 6rem",
-  }
+  },
 }));
 
 const MainFeaturedPost: React.FC = () => {
@@ -79,17 +79,19 @@ const MainFeaturedPost: React.FC = () => {
             </Typography>
             <hr></hr>
             <Typography variant="h5" color="inherit" paragraph>
-              - Developer
+              <BsHash /> Software Engineer
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
-              - Researcher
+              <BsHash /> FinTech Researcher
             </Typography>
             {/* <Typography variant="h6" color="inherit" paragraph>
               
             </Typography> */}
             <div className={classes.buttonContainer}>
               <Link to="/">
-                <Button variant="contained" style={{padding: "1rem 6rem"}}>Explore</Button>
+                <Button variant="contained" style={{ padding: "1rem 6rem" }}>
+                  Explore
+                </Button>
               </Link>
             </div>
           </div>
