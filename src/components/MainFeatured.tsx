@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     marginTop: "4rem",
+    height: "35rem",
   },
   overlay: {
     position: "absolute",
@@ -62,15 +63,15 @@ const MainFeaturedPost: React.FC = () => {
               color="inherit"
               gutterBottom
             >
-              Title of a longer featured blog post
+              AOI KUROKAWA
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
+            {/* <Typography variant="h5" color="inherit" paragraph>
               Multiple lines of text that form the lede, informing new readers
               quickly and efficiently about what's most interesting in this
               post's contents.
-            </Typography>
+            </Typography> */}
             <Link variant="subtitle1" href="#">
-              Continue reading…
+              Explore
             </Link>
           </div>
         </Grid>
