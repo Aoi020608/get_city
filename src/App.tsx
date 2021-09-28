@@ -10,7 +10,7 @@ import post1 from "./blog-post1.md";
 import post2 from "./blog-post2.md";
 import post3 from "./blog-post3.md";
 import ComponentName from "./components/Markdown2";
-import News from "./pages/News";
+import Works from "./pages/Works";
 import Price from "./pages/Price";
 import Aboutme from "./pages/Aboutme";
 import SignIn from "./pages/SignIn";
@@ -57,7 +57,7 @@ function App() {
             <ComponentName />
           </Route>
           <Route path="/works" exact>
-            <News />
+            <Works />
           </Route>
           <Route path="/price" exact>
             <Price />
