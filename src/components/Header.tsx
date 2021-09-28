@@ -81,7 +81,7 @@ const Header: React.FC = () => {
                 <Link to="/aboutus">ABOUT ME</Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link to="/aboutus">CONTACT</Link>
+                <Link to="/contact">CONTACT</Link>
               </Typography>
             </Grid>
             <Grid sm={3} className={classes.loginContainer}>

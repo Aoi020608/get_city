@@ -53,17 +53,17 @@ function App() {
               ))}
             </Grid> */}
           </Route>
-          <Route path="/blog" exact>
-            <ComponentName />
-          </Route>
           <Route path="/works" exact>
             <Works />
           </Route>
-          <Route path="/price" exact>
-            <Price />
-          </Route>
           <Route path="/aboutus" exact>
             <Aboutme />
+          </Route>
+          <Route path="/contact" exact>
+            <ComponentName />
+          </Route>
+          <Route path="/price" exact>
+            <Price />
           </Route>
           <Route path="/signin" exact>
             <SignIn />

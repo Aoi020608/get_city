@@ -1,42 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { Grid, Typography } from "@mui/material/";
-import { makeStyles } from "@material-ui/core/styles";
-import Divider from "@mui/material/Divider";
-import showdown from "showdown";
-import parse from "html-react-parser";
-import readme from "../blog-post1.md";
+import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Container from "@mui/material/Container";
 
-const useStyles = makeStyles((theme) => ({
-    blogContainer: {
-        padding: "0 10rem",
-    }
-  }));
+const theme = createTheme();
 
-export default function ComponentName() {
-    const classes = useStyles();
-  const [html, setHTML] = useState("");
-
-  //Use componentDidMount(): if class based component to load md file
-  useEffect(() => {
-    fetch(readme)
-      .then((data) => data.text())
-      .then((text) => {
-        const converter = new showdown.Converter();
-        setHTML(converter.makeHtml(text));
-      });
-  }, []);
-
+function Contact() {
   return (
-    <Grid
-      item
-      style={{ marginTop: "4rem"}}
-      className={classes.blogContainer}
-    >
-      <Typography variant="h6" gutterBottom>
-        Title
-      </Typography>
-      <Divider />
-      <div>{parse(html)}</div>
-    </Grid>
+    <ThemeProvider theme={theme}>
+      <Container sx={{ py: 8 }} maxWidth="lg">
+        <h1>About Me</h1>
+        <img src="" />
+      </Container>
+    </ThemeProvider>
   );
 }
+
+export default Contact;
