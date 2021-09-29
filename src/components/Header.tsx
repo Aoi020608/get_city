@@ -78,7 +78,7 @@ const Header: React.FC = () => {
                 <Link to="/price">PRICE</Link>
               </Typography> */}
               <Typography variant="button" color="textSecondary">
-                <Link to="/aboutus">ABOUT ME</Link>
+                <Link to="/aboutme">ABOUT ME</Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
                 <Link to="/contact">CONTACT</Link>
