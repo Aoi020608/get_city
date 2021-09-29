@@ -1,14 +1,9 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
 import { Switch, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import MainFeaturedPost from "./components/MainFeatured";
-import FeaturedPost from "./components/FeaturedPost";
 import Footer from "./components/Footer";
-import post1 from "./blog-post1.md";
-import post2 from "./blog-post2.md";
-import post3 from "./blog-post3.md";
 import Contact from "./components/Contact";
 import Works from "./pages/Works";
 import Price from "./pages/Price";
@@ -16,27 +11,6 @@ import Aboutme from "./pages/Aboutme";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ForGotPassword from "./pages/ForgotPassword";
-
-const featuredPosts = [
-  {
-    title: "Featured post",
-    date: "Nov 12",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageLabel: "Image Text",
-  },
-  {
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageLabel: "Image Text",
-  },
-];
-
-const posts = [post1, post2, post3];
 
 function App() {
   const location = useLocation();
