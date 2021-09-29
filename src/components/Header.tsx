@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -44,11 +44,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Header: React.FC = () => {
   const classes = useStyles();
-  const history = useHistory();
-
-  const handleSignIn = () => {
-    history.push("/signin");
-  };
 
   return (
     <div className={classes.root}>
