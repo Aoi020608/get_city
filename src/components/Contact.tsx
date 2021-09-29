@@ -79,10 +79,18 @@ function Contact() {
               }}
             >
               <FormControlLabel
-                control={<Checkbox onChange={(e) => setAccept(e.target.checked)} />}
+                control={
+                  <Checkbox onChange={(e) => setAccept(e.target.checked)} />
+                }
                 label="I accept the privacy policy."
               />
-              <Button variant="outlined" disabled={!accept} sx={{padding: "0.5rem 3rem"}}>Send</Button>
+              <Button
+                variant="outlined"
+                disabled={!accept}
+                sx={{ padding: "0.5rem 3rem" }}
+              >
+                Send
+              </Button>
             </Grid>
           </Box>
         </FormGroup>
