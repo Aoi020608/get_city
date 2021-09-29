@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import post1 from "./blog-post1.md";
 import post2 from "./blog-post2.md";
 import post3 from "./blog-post3.md";
-import ComponentName from "./components/Markdown2";
+import Contact from "./components/Contact";
 import Works from "./pages/Works";
 import Price from "./pages/Price";
 import Aboutme from "./pages/Aboutme";
@@ -60,7 +60,7 @@ function App() {
             <Aboutme />
           </Route>
           <Route path="/contact" exact>
-            <ComponentName />
+            <Contact />
           </Route>
           <Route path="/price" exact>
             <Price />
