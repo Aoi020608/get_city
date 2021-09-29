@@ -4,10 +4,6 @@ import {
   Container,
   Typography,
   FormGroup,
-  FormControl,
-  InputLabel,
-  Input,
-  FormHelperText,
   Grid,
   Box,
   TextField,
@@ -31,7 +27,7 @@ function Contact() {
               border: "1px solid black",
               borderRadius: "1rem",
               padding: "1rem 1rem 0 1rem",
-              margin: "2rem 0",
+              margin: "1.5rem 0",
             }}
             noValidate
             autoComplete="off"

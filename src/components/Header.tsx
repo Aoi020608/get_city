@@ -66,7 +66,7 @@ const Header: React.FC = () => {
               </IconButton>
               <Typography variant="h5">
                 <Link to="/" className={classes.title}>
-                  AOI KUROKAWA
+                  AOI
                 </Link>
               </Typography>
             </Grid>
