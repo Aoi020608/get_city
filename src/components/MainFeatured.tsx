@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    marginTop: "4rem",
-    height: "36rem",
+    margin: "4rem 0 2rem 0",
+    height: "35rem",
   },
   overlay: {
     position: "absolute",
@@ -54,17 +54,11 @@ const MainFeaturedPost: React.FC = () => {
     <Paper
       className={classes.mainFeaturedPost}
       style={{
-        backgroundImage: `url(https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?cs=srgb&dl=pexels-denis-linine-714258.jpg&fm=jpg`,
+        backgroundImage: `${image1}`,
       }}
     >
       {/* Increase the priority of the hero background image */}
-      {
-        <img
-          style={{ display: "none" }}
-          src="https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?cs=srgb&dl=pexels-denis-linine-714258.jpg&fm=jpg"
-          alt="description"
-        />
-      }
+      {<img style={{ display: "none" }} src={image1} alt="description" />}
       <div className={classes.overlay} />
       <Grid container>
         <Grid item md={6}>
