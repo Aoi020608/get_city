@@ -21,11 +21,6 @@ function App() {
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
             <MainFeaturedPost />
-            {/* <Grid container spacing={4}>
-              {featuredPosts.map((post) => (
-                <FeaturedPost key={post.title} post={post} />
-              ))}
-            </Grid> */}
           </Route>
           <Route path="/works" exact>
             <Works />
