@@ -3,11 +3,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import { CardMedia, Grid } from "@mui/material";
 import { CardActionArea } from "@mui/material";
 import Markdown from "markdown-to-jsx";
 
-import me from "../assets/img/me3.png";
+import me from "../assets/img/me.png";
 
 const theme = createTheme();
 
@@ -36,19 +36,34 @@ function Aboutme() {
   return (
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
-        <Card sx={{ maxWidth: "100rem", marginBottom: "3rem" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="500rem"
-              image={me}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Markdown>{md}</Markdown>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+        <Grid
+          container
+          spacing={2}
+          sx={{ marginBottom: "2rem" }}
+        >
+          <Grid item lg={7} sm={12}>
+            <Card>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="600rem"
+                  image={me}
+                  alt="green iguana"
+                  // sx={{ padding: "1rem 1rem" }}
+                />
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item lg={5} sm={12}>
+            <Card>
+              <CardActionArea>
+                <CardContent>
+                  <Markdown>{md}</Markdown>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        </Grid>
       </Container>
     </ThemeProvider>
   );

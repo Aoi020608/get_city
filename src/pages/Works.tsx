@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useHistory } from "react-router";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -11,17 +12,18 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaGithub } from "react-icons/fa";
 import { BiDetail } from "react-icons/bi";
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+import data from "../worksData.json";
 
 const theme = createTheme();
 
 export default function Works() {
+  const histry = useHistory();
   return (
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
         <Grid container spacing={4}>
-          {cards.map((card) => (
-            <Grid item key={card} xs={12} sm={6} md={6}>
+          {data.map((d) => (
+            <Grid item key={d.id} xs={12} sm={6} md={6}>
               <Card
                 sx={{
                   height: "100%",
@@ -32,25 +34,26 @@ export default function Works() {
                 <CardMedia
                   component="img"
                   sx={{}}
-                  image="https://raw.githubusercontent.com/Aoi1011/eth_CoinFlip/main/assets/readmeImage.png"
+                  image={d.image}
                   alt="random"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Coin Flip
+                    {d.title}
                   </Typography>
-                  <Typography>
-                    CoinFlip DApp is a decentralized application where a player
-                    can bet on the result of a coin flip.
-                  </Typography>
+                  <Typography>{d.description}</Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="large">
-                    <FaGithub />
-                  </Button>
-                  <Button size="large">
-                    <BiDetail />
-                  </Button>
+                  {d.githubLink && (
+                    <Button size="large" onClick={() => histry.push(`${d.githubLink}`)}>
+                      <FaGithub />
+                    </Button>
+                  )}
+                  {d.detailLink && (
+                    <Button size="large" onClick={() => histry.push(`${d.detailLink}`)}>
+                      <BiDetail />
+                    </Button>
+                  )}
                 </CardActions>
               </Card>
             </Grid>
