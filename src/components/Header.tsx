@@ -69,9 +69,6 @@ const Header: React.FC = () => {
               <Typography variant="button" color="textSecondary">
                 <Link to="/works">WORKS</Link>
               </Typography>
-              {/* <Typography variant="button" color="textSecondary">
-                <Link to="/price">PRICE</Link>
-              </Typography> */}
               <Typography variant="button" color="textSecondary">
                 <Link to="/aboutme">ABOUT ME</Link>
               </Typography>
