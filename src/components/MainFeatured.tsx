@@ -61,7 +61,6 @@ const MainFeaturedPost: React.FC = () => {
         backgroundImage: `${image1}`,
       }}
     >
-      {/* Increase the priority of the hero background image */}
       {<img style={{ display: "none" }} src={image1} alt="description" />}
       <div className={classes.overlay} />
       <Grid container>
@@ -82,9 +81,6 @@ const MainFeaturedPost: React.FC = () => {
             <Typography variant="h5" color="inherit" paragraph>
               <BsHash /> FinTech Researcher
             </Typography>
-            {/* <Typography variant="h6" color="inherit" paragraph>
-              
-            </Typography> */}
             <div className={classes.buttonContainer}>
               <Button
                 variant="contained"
@@ -97,10 +93,6 @@ const MainFeaturedPost: React.FC = () => {
           </div>
         </Grid>
       </Grid>
-
-      {/* <Link to="/news"> */}
-      {/* <button>Explore</button> */}
-      {/* </Link> */}
     </Paper>
   );
 };
