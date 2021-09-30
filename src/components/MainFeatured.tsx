@@ -79,7 +79,7 @@ const MainFeaturedPost: React.FC = () => {
               <BsHash /> Software Engineer
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
-              <BsHash /> FinTech Researcher
+              <BsHash /> Blockchain Researcher
             </Typography>
             <div className={classes.buttonContainer}>
               <Button
