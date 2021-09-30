@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -48,7 +48,11 @@ const useStyles = makeStyles((theme) => ({
 
 const MainFeaturedPost: React.FC = () => {
   const classes = useStyles();
-  //   const { post } = props;
+  const history = useHistory();
+
+  const handleExplore = () => {
+    history.push("/works");
+  };
 
   return (
     <Paper
@@ -82,11 +86,13 @@ const MainFeaturedPost: React.FC = () => {
               
             </Typography> */}
             <div className={classes.buttonContainer}>
-              <Link to="/">
-                <Button variant="contained" style={{ padding: "1rem 6rem" }}>
-                  Explore
-                </Button>
-              </Link>
+              <Button
+                variant="contained"
+                style={{ padding: "1rem 6rem" }}
+                onClick={handleExplore}
+              >
+                Explore
+              </Button>
             </div>
           </div>
         </Grid>
