@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaGithub } from "react-icons/fa";
 import { BiDetail } from "react-icons/bi";
+import { Link } from "@mui/material";
 
 import data from "../worksData.json";
 
@@ -45,14 +46,20 @@ export default function Works() {
                 </CardContent>
                 <CardActions>
                   {d.githubLink && (
-                    <Button size="large" onClick={() => histry.push(`${d.githubLink}`)}>
-                      <FaGithub />
-                    </Button>
+                    <Link href={d.githubLink}>
+                      <Button size="large">
+                        <FaGithub />
+                      </Button>
+                    </Link>
                   )}
                   {d.detailLink && (
-                    <Button size="large" onClick={() => histry.push(`${d.detailLink}`)}>
-                      <BiDetail />
-                    </Button>
+                    <Link href={d.detailLink}>
+                      <Button
+                        size="large"
+                      >
+                        <BiDetail />
+                      </Button>
+                    </Link>
                   )}
                 </CardActions>
               </Card>
