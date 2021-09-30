@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-evenly",
     fontSize: "1rem",
-    padding: "1rem",
+    padding: "0.3rem",
   },
   alink: {
     padding: "1rem",
@@ -55,7 +55,7 @@ const Footer = (props: FooterProps) => {
         bottom: 0,
         width: "100%",
         textAlign: "center",
-        padding: "1rem",
+        padding: "0.5rem",
       }}
       className={classes.footerContainer}
     >
