@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useHistory } from "react-router";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -18,7 +17,6 @@ import data from "../worksData.json";
 const theme = createTheme();
 
 export default function Works() {
-  const histry = useHistory();
   return (
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
