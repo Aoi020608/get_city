@@ -75,10 +75,10 @@ const MainFeaturedPost: React.FC = () => {
               AOI KUROKAWA
             </Typography>
             <hr></hr>
-            <Typography variant="h5" color="inherit" paragraph>
+            <Typography variant="h5" color="inherit" paragraph style={{padding: "1rem"}}>
               <BsHash /> Software Engineer
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
+            <Typography variant="h5" color="inherit" paragraph style={{padding: "1rem"}}>
               <BsHash /> Blockchain Researcher
             </Typography>
             <div className={classes.buttonContainer}>
