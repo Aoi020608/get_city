@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Works from "./pages/Works";
 import Aboutme from "./pages/Aboutme";
+import PostsPage from "./pages/posts";
 
 function App() {
   const location = useLocation();
@@ -24,8 +25,11 @@ function App() {
           <Route path="/aboutme" exact>
             <Aboutme />
           </Route>
-          <Route path="/contact" exact>
+          {/* <Route path="/contact" exact>
             <Contact />
+          </Route> */}
+          <Route path="/post" exact>
+            <PostsPage />
           </Route>
         </Switch>
       </main>

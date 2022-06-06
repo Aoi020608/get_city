@@ -70,10 +70,10 @@ const Header: React.FC = () => {
                 <Link to="/works">WORKS</Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link to="/aboutme">ABOUT ME</Link>
+                <Link to="/post">Writings</Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/aboutme">ABOUT ME</Link>
               </Typography>
             </Grid>
             <Grid sm={3} className={classes.loginContainer}>
