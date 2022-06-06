@@ -1,8 +1,12 @@
-import * as fs from "fs/promises";
+// import * as fs from "fs/promises";
+import { promises as fs } from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-const postsDir = path.join(process.cwd(), "content/posts");
+// const fs = require("fs/promises");
+
+const postsDir = path.join(process.cwd(), "");
+// const postsDir = path.join("../../../content/posts");
 
 export interface IPost {
   id: string;
@@ -24,6 +28,7 @@ export interface IPost {
 }
 
 export const getAllPosts = async (): Promise<readonly IPost[]> => {
+  console.log(postsDir);
   const posts = await fs.readdir(postsDir);
   return await Promise.all(
     posts.map(async (post) => {
