@@ -4,8 +4,6 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import { Grid } from "@material-ui/core";
 import { FaMedium, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
@@ -51,14 +49,6 @@ const Header: React.FC = () => {
         <Toolbar className={classes.toolbar}>
           <Grid container spacing={3}>
             <Grid sm={3} className={classes.titleContainer}>
-              <IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="primary"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
               <Typography variant="h5">
                 <Link to="/" className={classes.title}>
                   AOI
