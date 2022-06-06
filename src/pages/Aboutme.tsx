@@ -36,11 +36,7 @@ function Aboutme() {
   return (
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
-        <Grid
-          container
-          spacing={2}
-          sx={{ marginBottom: "2rem" }}
-        >
+        <Grid container spacing={2} sx={{ marginBottom: "2rem" }}>
           <Grid item lg={7} sm={12}>
             <Card>
               <CardActionArea>

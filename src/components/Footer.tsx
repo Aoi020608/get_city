@@ -1,10 +1,7 @@
-import * as React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { FaMedium, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
@@ -60,23 +57,6 @@ const Footer = (props: FooterProps) => {
       className={classes.footerContainer}
     >
       <Copyright />
-      <Container className={classes.acontainer}>
-        <a href="https://medium.com/@aoi01" className={classes.alink}>
-          <FaMedium />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/aoi-kurokawa-aa1744204/"
-          className={classes.alink}
-        >
-          <FaLinkedin />
-        </a>
-        <a href="https://github.com/Aoi1011" className={classes.alink}>
-          <FaGithub />
-        </a>
-        <a href="https://twitter.com/Aoi49376675" className={classes.alink}>
-          <FaTwitter />
-        </a>
-      </Container>
     </Box>
   );
 };
