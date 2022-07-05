@@ -4,9 +4,9 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import MainFeaturedPost from "./components/MainFeatured";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact";
 import Works from "./pages/Works";
 import Aboutme from "./pages/Aboutme";
+import Blog from "./pages/Blog";
 
 function App() {
   const location = useLocation();
@@ -26,8 +26,8 @@ function App() {
           <Route path="/aboutme" exact>
             <Aboutme />
           </Route>
-          <Route path="/contact" exact>
-            <Contact />
+          <Route path="/blog" exact>
+            <Blog />
           </Route>
         </Switch>
       </main>

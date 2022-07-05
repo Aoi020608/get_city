@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -60,10 +60,10 @@ export default function Header() {
                 <Link to="/works">WORKS</Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link to="/aboutme">ABOUT ME</Link>
+                <Link to="/blog">BLOG</Link>
               </Typography>
               <Typography variant="button" color="textSecondary">
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/aboutme">ABOUT ME</Link>
               </Typography>
             </Grid>
           </Grid>
