@@ -1,12 +1,12 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
-import Header from "./components/Header";
-import MainFeaturedPost from "./components/MainFeatured";
-import Footer from "./components/Footer";
-import Works from "./pages/Work";
-import Aboutme from "./pages/AboutMe";
-import Blog from "./pages/Blog";
-import EditBlog from "./pages/EditBlog";
+import Header from "../components/Header";
+import MainFeaturedPost from "../components/MainFeatured";
+import Footer from "../components/Footer";
+import Works from "./Work";
+import Aboutme from "./AboutMe";
+import Blog from "./Blog";
+import EditBlog from "./EditBlog";
 
 export default function App() {
   const location = useLocation();

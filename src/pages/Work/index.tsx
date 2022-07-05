@@ -12,7 +12,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiDetail } from "react-icons/bi";
 import { Link } from "@mui/material";
 
-import data from "../worksData.json";
+import data from "../../worksData.json";
 
 const theme = createTheme();
 

@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import { instance } from "../configs/api";
+import { instance } from "../../configs/api";
 
 const theme = createTheme();
 

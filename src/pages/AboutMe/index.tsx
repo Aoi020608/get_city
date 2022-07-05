@@ -1,4 +1,3 @@
-import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
@@ -7,7 +6,7 @@ import { CardMedia, Grid } from "@mui/material";
 import { CardActionArea } from "@mui/material";
 import Markdown from "markdown-to-jsx";
 
-import me from "../assets/img/me.png";
+import me from "../../assets/img/me.png";
 
 const theme = createTheme();
 
@@ -36,11 +35,7 @@ function Aboutme() {
   return (
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
-        <Grid
-          container
-          spacing={2}
-          sx={{ marginBottom: "2rem" }}
-        >
+        <Grid container spacing={2} sx={{ marginBottom: "2rem" }}>
           <Grid item lg={7} sm={12}>
             <Card>
               <CardActionArea>
