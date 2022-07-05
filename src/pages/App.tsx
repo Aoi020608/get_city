@@ -17,21 +17,11 @@ export default function App() {
         style={{ padding: "1rem", backgroundColor: "#000000", height: "100vh" }}
       >
         <Routes location={location} key={location.pathname}>
-          <Route path="/">
-            <MainFeaturedPost />
-          </Route>
-          <Route path="/works">
-            <Works />
-          </Route>
-          <Route path="/aboutme">
-            <Aboutme />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/blog/edit">
-            <EditBlog />
-          </Route>
+          <Route path="/" element={<MainFeaturedPost />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/aboutme" element={<Aboutme />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/edit" element={<EditBlog />} />
         </Routes>
       </main>
       <Footer
