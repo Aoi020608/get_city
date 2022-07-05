@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import MainFeaturedPost from "./components/MainFeatured";
@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Works from "./pages/Works";
 import Aboutme from "./pages/Aboutme";
 import Blog from "./pages/Blog";
+import EditBlog from "./pages/EditBlog";
 
 function App() {
   const location = useLocation();
@@ -16,20 +17,23 @@ function App() {
       <main
         style={{ padding: "1rem", backgroundColor: "#000000", height: "100vh" }}
       >
-        <Switch location={location} key={location.pathname}>
-          <Route path="/" exact>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/">
             <MainFeaturedPost />
           </Route>
-          <Route path="/works" exact>
+          <Route path="/works">
             <Works />
           </Route>
-          <Route path="/aboutme" exact>
+          <Route path="/aboutme">
             <Aboutme />
           </Route>
-          <Route path="/blog" exact>
+          <Route path="/blog">
             <Blog />
           </Route>
-        </Switch>
+          <Route path="/blog/edit">
+            <EditBlog />
+          </Route>
+        </Routes>
       </main>
       <Footer
         title="Footer"
