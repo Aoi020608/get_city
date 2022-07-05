@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     toolbar: {
-      backgroundColor: "white",
+      backgroundColor: "#000000",
     },
     titleContainer: {
       display: "flex",
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       //   flexGrow: 1,
       outline: "none",
-      color: "black",
+      color: "#ffffff",
     },
     loginContainer: {
       display: "flex",
@@ -86,7 +86,7 @@ const Header: React.FC = () => {
               <a href="https://github.com/Aoi1011">
                 <FaGithub />
               </a>
-              <a href="https://twitter.com/Aoi49376675">
+              <a href="https://twitter.com/aoi18_en">
                 <FaTwitter />
               </a>
             </Grid>

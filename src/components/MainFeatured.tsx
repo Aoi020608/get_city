@@ -1,10 +1,9 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import { Button } from "@mui/material";
 import { BsHash } from "react-icons/bs";
 
 import image1 from "../assets/img/mountain.jpg";
@@ -75,21 +74,39 @@ const MainFeaturedPost: React.FC = () => {
               AOI KUROKAWA
             </Typography>
             <hr></hr>
-            <Typography variant="h5" color="inherit" paragraph style={{padding: "1rem"}}>
+            <Typography
+              variant="h5"
+              color="inherit"
+              paragraph
+              style={{ padding: "1rem" }}
+            >
+              Hi, I'm Aoi. I'm currently a student, studying computer science. I
+              am interested in crypto, blockchain, web3.0. I have joined some
+              projects such as watch NFT project, video NFT project. My task was
+              mainly developing front-end using React.js and developing smart
+              contracts. You can find some projects that I have joined before
+              and my personal projects
+              <Link
+                to={"/works"}
+                style={{
+                  paddingLeft: "0.5rem",
+                  textDecoration: "underline",
+                  color: "white",
+                }}
+              >
+                here.
+              </Link>
+            </Typography>
+            <Typography variant="h5" color="inherit" paragraph>
               <BsHash /> Software Engineer
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph style={{padding: "1rem"}}>
-              <BsHash /> Blockchain Researcher
+            <Typography variant="h5" color="inherit" paragraph>
+              <BsHash /> Blockchain
             </Typography>
-            <div className={classes.buttonContainer}>
-              <Button
-                variant="contained"
-                style={{ padding: "1rem 6rem" }}
-                onClick={handleExplore}
-              >
-                Explore
-              </Button>
-            </div>
+
+            <Typography variant="h5" color="inherit" paragraph>
+              <BsHash /> Crypto
+            </Typography>
           </div>
         </Grid>
       </Grid>
