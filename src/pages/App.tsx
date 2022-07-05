@@ -1,15 +1,14 @@
-import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import MainFeaturedPost from "./components/MainFeatured";
 import Footer from "./components/Footer";
-import Works from "./pages/Works";
-import Aboutme from "./pages/Aboutme";
+import Works from "./pages/Work";
+import Aboutme from "./pages/AboutMe";
 import Blog from "./pages/Blog";
 import EditBlog from "./pages/EditBlog";
 
-function App() {
+export default function App() {
   const location = useLocation();
   return (
     <div>
@@ -42,5 +41,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

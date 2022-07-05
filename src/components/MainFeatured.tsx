@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -49,11 +49,6 @@ const useStyles = makeStyles((theme) => ({
 
 const MainFeaturedPost: React.FC = () => {
   const classes = useStyles();
-  const history = useHistory();
-
-  const handleExplore = () => {
-    history.push("/works");
-  };
 
   return (
     <>
