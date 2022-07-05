@@ -1,10 +1,7 @@
-import * as React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { FaMedium, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
@@ -26,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant="body2" align="center" style={{ color: "#fff" }}>
       {"Copyright © "}
       <Link color="inherit" to="/">
         AOI
@@ -42,7 +39,7 @@ interface FooterProps {
   title: string;
 }
 
-const Footer = (props: FooterProps) => {
+export default function Footer(props: FooterProps) {
   const classes = useStyles();
 
   return (
@@ -50,35 +47,16 @@ const Footer = (props: FooterProps) => {
       component="footer"
       sx={{ bgcolor: "background.paper", py: 6 }}
       style={{
-        backgroundColor: "lavender",
+        backgroundColor: "#000",
         position: "fixed",
         bottom: 0,
         width: "100%",
         textAlign: "center",
-        padding: "0.5rem",
+        padding: "2.5rem",
       }}
       className={classes.footerContainer}
     >
       <Copyright />
-      <Container className={classes.acontainer}>
-        <a href="https://medium.com/@aoi01" className={classes.alink}>
-          <FaMedium />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/aoi-kurokawa-aa1744204/"
-          className={classes.alink}
-        >
-          <FaLinkedin />
-        </a>
-        <a href="https://github.com/Aoi1011" className={classes.alink}>
-          <FaGithub />
-        </a>
-        <a href="https://twitter.com/Aoi49376675" className={classes.alink}>
-          <FaTwitter />
-        </a>
-      </Container>
     </Box>
   );
-};
-
-export default Footer;
+}

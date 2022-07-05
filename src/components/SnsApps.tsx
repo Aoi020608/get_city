@@ -4,34 +4,14 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    toolbar: {
-      backgroundColor: "#000000",
-      borderBottom: "1px solid",
-    },
-    titleContainer: {
-      display: "flex",
-      alignItems: "center",
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    menuContainer: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-evenly",
-    },
-    title: {
-      outline: "none",
-      color: "#ffffff",
-      padding: "1rem",
-    },
     loginContainer: {
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-evenly",
+      justifyContent: "space-around",
+      fontSize: "3rem",
+      width: "100%",
+      backgroundColor: "#000",
+      padding: "0 20rem",
     },
   })
 );
@@ -39,17 +19,33 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function SnsApps() {
   const classes = useStyles();
   return (
-    <Grid sm={3} className={classes.loginContainer}>
-      <a href="https://medium.com/@aoi01">
+    <Grid className={classes.loginContainer}>
+      <a
+        href="https://medium.com/@aoi01"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaMedium />
       </a>
-      <a href="https://www.linkedin.com/in/aoi-kurokawa-aa1744204/">
+      <a
+        href="https://www.linkedin.com/in/aoi-kurokawa-aa1744204/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaLinkedin />
       </a>
-      <a href="https://github.com/Aoi1011">
+      <a
+        href="https://github.com/Aoi1011"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaGithub />
       </a>
-      <a href="https://twitter.com/aoi18_en">
+      <a
+        href="https://twitter.com/aoi18_en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaTwitter />
       </a>
     </Grid>

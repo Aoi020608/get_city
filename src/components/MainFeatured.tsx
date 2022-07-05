@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import { BsHash } from "react-icons/bs";
 
 import image1 from "../assets/img/mountain.jpg";
+import SnsApps from "./SnsApps";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(6),
       paddingRight: 0,
     },
+    color: "#7fff65",
   },
   buttonContainer: {
     padding: "5rem",
@@ -42,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     padding: "1rem 6rem",
   },
+  snsContainer: {},
 }));
 
 const MainFeaturedPost: React.FC = () => {
@@ -53,63 +56,68 @@ const MainFeaturedPost: React.FC = () => {
   };
 
   return (
-    <Paper
-      className={classes.mainFeaturedPost}
-      style={{
-        backgroundImage: `${image1}`,
-      }}
-    >
-      {<img style={{ display: "none" }} src={image1} alt="description" />}
-      <div className={classes.overlay} />
-      <Grid container>
-        <Grid item md={6}>
-          <div className={classes.mainFeaturedPostContent}>
-            <Typography
-              component="h1"
-              variant="h3"
-              color="inherit"
-              gutterBottom
-            >
-              AOI KUROKAWA
-            </Typography>
-            <hr></hr>
-            <Typography
-              variant="h5"
-              color="inherit"
-              paragraph
-              style={{ padding: "1rem", color: "#7fff65" }}
-            >
-              Hi, I'm Aoi. I'm currently a student, studying computer science. I
-              am interested in crypto, blockchain, web3.0. I have joined some
-              projects such as watch NFT project, video NFT project. My task was
-              mainly developing front-end using React.js and developing smart
-              contracts. You can find some projects that I have joined before
-              and my personal projects
-              <Link
-                to={"/works"}
-                style={{
-                  paddingLeft: "0.5rem",
-                  textDecoration: "underline",
-                  color: "#7fff65",
-                }}
+    <>
+      <Paper
+        className={classes.mainFeaturedPost}
+        style={{
+          backgroundImage: `${image1}`,
+        }}
+      >
+        {<img style={{ display: "none" }} src={image1} alt="description" />}
+        <div className={classes.overlay} />
+        <Grid container>
+          <Grid item md={6}>
+            <div className={classes.mainFeaturedPostContent}>
+              <Typography
+                component="h1"
+                variant="h3"
+                color="inherit"
+                gutterBottom
               >
-                here.
-              </Link>
-            </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-              <BsHash /> Software Engineer
-            </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-              <BsHash /> Blockchain
-            </Typography>
+                AOI KUROKAWA
+              </Typography>
+              <hr></hr>
+              <Typography
+                variant="h5"
+                color="inherit"
+                paragraph
+                style={{ padding: "1rem" }}
+              >
+                Hi, I'm Aoi. I'm currently a student, studying computer science.
+                I am interested in crypto, blockchain, web3.0. I have joined
+                some projects such as watch NFT project, video NFT project. My
+                task was mainly developing front-end using React.js and
+                developing smart contracts. You can find some projects that I
+                have joined before and my personal projects
+                <Link
+                  to={"/works"}
+                  style={{
+                    paddingLeft: "0.5rem",
+                    textDecoration: "underline",
+                    color: "#7fff65",
+                  }}
+                >
+                  here.
+                </Link>
+              </Typography>
+              <Typography variant="h5" color="inherit" paragraph>
+                <BsHash /> Software Engineer
+              </Typography>
+              <Typography variant="h5" color="inherit" paragraph>
+                <BsHash /> Blockchain
+              </Typography>
 
-            <Typography variant="h5" color="inherit" paragraph>
-              <BsHash /> Crypto
-            </Typography>
-          </div>
+              <Typography variant="h5" color="inherit" paragraph>
+                <BsHash /> Crypto
+              </Typography>
+            </div>
+          </Grid>
         </Grid>
-      </Grid>
-    </Paper>
+      </Paper>
+      <Paper>
+        <SnsApps />
+      </Paper>
+    </>
   );
 };
 
