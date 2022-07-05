@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     margin: "4rem 0 2rem 0",
-    height: "37rem",
   },
   overlay: {
     position: "absolute",
@@ -78,7 +77,7 @@ const MainFeaturedPost: React.FC = () => {
               variant="h5"
               color="inherit"
               paragraph
-              style={{ padding: "1rem" }}
+              style={{ padding: "1rem", color: "#7fff65" }}
             >
               Hi, I'm Aoi. I'm currently a student, studying computer science. I
               am interested in crypto, blockchain, web3.0. I have joined some
@@ -91,7 +90,7 @@ const MainFeaturedPost: React.FC = () => {
                 style={{
                   paddingLeft: "0.5rem",
                   textDecoration: "underline",
-                  color: "white",
+                  color: "#7fff65",
                 }}
               >
                 here.

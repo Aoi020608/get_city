@@ -13,7 +13,9 @@ function App() {
   return (
     <div>
       <Header />
-      <main style={{ padding: "1rem" }}>
+      <main
+        style={{ padding: "1rem", backgroundColor: "#000000", height: "100vh" }}
+      >
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
             <MainFeaturedPost />

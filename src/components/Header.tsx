@@ -4,10 +4,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import { Grid } from "@material-ui/core";
-import { FaMedium, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,6 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     toolbar: {
       backgroundColor: "#000000",
+      borderBottom: "1px solid",
     },
     titleContainer: {
       display: "flex",
@@ -30,9 +28,9 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: "space-evenly",
     },
     title: {
-      //   flexGrow: 1,
       outline: "none",
       color: "#ffffff",
+      padding: "1rem",
     },
     loginContainer: {
       display: "flex",
@@ -42,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Header: React.FC = () => {
+export default function Header() {
   const classes = useStyles();
 
   return (
@@ -51,14 +49,6 @@ const Header: React.FC = () => {
         <Toolbar className={classes.toolbar}>
           <Grid container spacing={3}>
             <Grid sm={3} className={classes.titleContainer}>
-              <IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="primary"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
               <Typography variant="h5">
                 <Link to="/" className={classes.title}>
                   AOI
@@ -76,25 +66,9 @@ const Header: React.FC = () => {
                 <Link to="/contact">CONTACT</Link>
               </Typography>
             </Grid>
-            <Grid sm={3} className={classes.loginContainer}>
-              <a href="https://medium.com/@aoi01">
-                <FaMedium />
-              </a>
-              <a href="https://www.linkedin.com/in/aoi-kurokawa-aa1744204/">
-                <FaLinkedin />
-              </a>
-              <a href="https://github.com/Aoi1011">
-                <FaGithub />
-              </a>
-              <a href="https://twitter.com/aoi18_en">
-                <FaTwitter />
-              </a>
-            </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
     </div>
   );
-};
-
-export default Header;
+}
