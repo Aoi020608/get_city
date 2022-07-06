@@ -52,9 +52,7 @@ export default function Works() {
                   )}
                   {d.detailLink && (
                     <Link href={d.detailLink}>
-                      <Button
-                        size="large"
-                      >
+                      <Button size="large">
                         <BiDetail />
                       </Button>
                     </Link>
