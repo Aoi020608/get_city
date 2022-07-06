@@ -3,9 +3,10 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
-import blogData from "../../blogData.json";
+import blogData from "./blogData.json";
 import { instance } from "../../configs/api";
 import BlogCard from "../../components/Card";
+import { Skeleton } from "@mui/material";
 
 const theme = createTheme();
 
@@ -13,8 +14,7 @@ export default function Blog() {
   const [blogs, setBlogs] = useState<Array<any> | null>([{}]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true);
+  const fetchAllPostData = () => {
     instance
       .get("/posts")
       .then((res) => {
@@ -27,23 +27,34 @@ export default function Blog() {
         console.error(err);
         setLoading(false);
       });
+  };
 
-    console.log(blogs);
+  useEffect(() => {
+    setLoading(true);
+    setBlogs(blogData);
+    setLoading(false);
   }, []);
 
   return (
     <>
-      {blogs!.length > 0 ? (
+      {!loading && blogs!.length > 0 ? (
         <ThemeProvider theme={theme}>
           <Container sx={{ py: 8 }} maxWidth="lg">
             <div style={{ color: "white" }}>
-              {blogs!.map((blog: any) => (
-                <BlogCard title={blog[0][2]} body={blog[0][3]} />
+              {blogs!.map((blog) => (
+                <BlogCard
+                  title={blog[0][2]}
+                  body={blog[0][3]}
+                  date={blog[0][5]}
+                  key={blog[0]}
+                />
               ))}
             </div>
           </Container>
         </ThemeProvider>
-      ) : null}
+      ) : (
+        <Skeleton animation="wave" />
+      )}
     </>
   );
 }
