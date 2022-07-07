@@ -17,12 +17,12 @@ export default function BlogCard({ title, body, date }: IBlogCardProps) {
   useEffect(() => {
     const tempDate = new Date(date);
     setNewDate(tempDate.toLocaleDateString());
-  }, []);
+  }, [date]);
 
   return (
     <Card
       sx={{
-        backgroundColor: "#a2a2a2",
+        backgroundColor: "#fff",
         color: "#000",
         margin: "3rem 4rem",
       }}
