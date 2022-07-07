@@ -32,7 +32,7 @@ export default function BlogDetail() {
         </div>
 
         <Typography
-          sx={{ color: "white", whiteSpace: "pre-wrap", fontSize: "30px" }}
+          sx={{ color: "#ccc4c4", whiteSpace: "pre-wrap", fontSize: "30px" }}
         >
           Special thanks to Liam Horne for feedback and review. I received no
           money from and have never even met any of the companies making the
