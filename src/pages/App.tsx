@@ -14,7 +14,13 @@ export default function App() {
     <div>
       <Header />
       <main
-        style={{ padding: "1rem", backgroundColor: "#000000", height: "100vh" }}
+        style={{
+          padding: "1rem",
+          backgroundColor: "#000000",
+          height: "100vh",
+          overflow: "scroll",
+          scrollbarWidth: "thin",
+        }}
       >
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<MainFeaturedPost />} />
