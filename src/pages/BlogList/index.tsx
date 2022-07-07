@@ -31,8 +31,7 @@ export default function Blog() {
 
   useEffect(() => {
     setLoading(true);
-    setBlogs(blogData);
-    setLoading(false);
+    fetchAllPostData();
   }, []);
 
   return (

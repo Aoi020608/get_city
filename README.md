@@ -4,4 +4,4 @@ My personal website.
 
 Stack:
 
-- React.js
+- React.js, Redux
