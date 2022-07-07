@@ -1,10 +1,10 @@
 interface Action {
   type: string;
   payload: {
-    id: number[];
-    title: string[];
-    body: string[];
-    date: number[];
+    id: number;
+    title: string;
+    body: string;
+    date: string;
   };
 }
 
