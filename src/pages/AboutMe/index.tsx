@@ -2,11 +2,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { CardMedia, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { CardActionArea } from "@mui/material";
 import Markdown from "markdown-to-jsx";
-
-import me from "../../assets/img/me.png";
 
 const theme = createTheme();
 
