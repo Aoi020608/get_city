@@ -45,6 +45,7 @@ export default function Blog() {
                 <div style={{ color: "white" }}>
                   {blogs!.map((blog) => (
                     <BlogCard
+                      id={blog[0][0]}
                       title={blog[0][2]}
                       body={blog[0][3]}
                       date={blog[0][5]}

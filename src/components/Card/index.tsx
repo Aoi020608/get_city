@@ -4,15 +4,28 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 interface IBlogCardProps {
+  id: number;
   title: string;
   body: string;
   date: string;
 }
 
-export default function BlogCard({ title, body, date }: IBlogCardProps) {
+export default function BlogCard({ id, title, body, date }: IBlogCardProps) {
   const [newDate, setNewDate] = useState("");
+  const dispatch = useDispatch();
+  const naviagete = useNavigate();
+
+  const handleClickRead = () => {
+    dispatch({
+      type: "PUSH_BLOG_DETAIL",
+      payload: { id, title, body, date },
+    });
+    naviagete(`/blog/${id}`);
+  };
 
   useEffect(() => {
     const tempDate = new Date(date);
@@ -45,7 +58,9 @@ export default function BlogCard({ title, body, date }: IBlogCardProps) {
         </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Button size="medium" >READ</Button>
+        <Button size="medium" onClick={handleClickRead}>
+          READ
+        </Button>
         <Typography variant="body2">{newDate}</Typography>
       </CardActions>
     </Card>
