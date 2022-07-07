@@ -48,14 +48,14 @@ export default function Header() {
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <Grid container spacing={3}>
-            <Grid sm={3} className={classes.titleContainer}>
+            <Grid item sm={3} className={classes.titleContainer}>
               <Typography variant="h5">
                 <Link to="/" className={classes.title}>
                   AOI
                 </Link>
               </Typography>
             </Grid>
-            <Grid sm={6} className={classes.menuContainer}>
+            <Grid item sm={6} className={classes.menuContainer}>
               <Typography variant="button" color="textSecondary">
                 <Link to="/works">WORKS</Link>
               </Typography>

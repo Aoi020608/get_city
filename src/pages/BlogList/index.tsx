@@ -2,7 +2,6 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 
-import blogData from "./blogData.json";
 import { instance } from "../../configs/api";
 import BlogCard from "../../components/Card";
 import { Grid, Skeleton } from "@mui/material";

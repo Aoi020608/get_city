@@ -4,11 +4,10 @@ import MenuItem from "@mui/material/MenuItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Article from "@mui/icons-material/Article";
-
-import categoryData from "./categoryData.json";
-import { useEffect, useState } from "react";
-import { instance } from "../../configs/api";
 import { Skeleton } from "@mui/material";
+import { useEffect, useState } from "react";
+
+import { instance } from "../../configs/api";
 
 export default function Menu() {
   const [categories, setCategories] = useState([[]]);
