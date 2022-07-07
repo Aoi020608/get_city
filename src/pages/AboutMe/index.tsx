@@ -35,29 +35,14 @@ function Aboutme() {
   return (
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
-        <Grid container spacing={2} sx={{ marginBottom: "2rem" }}>
-          <Grid item lg={7} sm={12}>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="600rem"
-                  image={me}
-                  alt="green iguana"
-                  // sx={{ padding: "1rem 1rem" }}
-                />
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid item lg={5} sm={12}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  <Markdown>{md}</Markdown>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
+        <Grid container spacing={1} sx={{ marginTop: "5rem" }}>
+          <Card>
+            <CardActionArea>
+              <CardContent>
+                <Markdown>{md}</Markdown>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </Grid>
       </Container>
     </ThemeProvider>
