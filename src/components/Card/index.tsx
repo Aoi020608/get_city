@@ -45,7 +45,7 @@ export default function BlogCard({ title, body, date }: IBlogCardProps) {
         </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Button size="small">READ</Button>
+        <Button size="medium" >READ</Button>
         <Typography variant="body2">{newDate}</Typography>
       </CardActions>
     </Card>
