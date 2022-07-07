@@ -22,7 +22,7 @@ export default function BlogCard({ id, title, body, date }: IBlogCardProps) {
   const handleClickRead = () => {
     dispatch({
       type: "PUSH_BLOG_DETAIL",
-      payload: { id, title, body, date },
+      payload: { id, title, body, date: newDate },
     });
     naviagete(`/blog/${id}`);
   };
