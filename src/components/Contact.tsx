@@ -32,7 +32,7 @@ function Contact() {
             noValidate
             autoComplete="off"
           >
-            <Grid lg={12} sm={12} sx={{ padding: "0.5rem" }}>
+            <Grid item lg={12} sm={12} sx={{ padding: "0.5rem" }}>
               <TextField
                 required
                 id="outlined-required"
@@ -40,7 +40,7 @@ function Contact() {
                 fullWidth
               />
             </Grid>
-            <Grid lg={12} sm={12} sx={{ padding: "0.5rem" }}>
+            <Grid item lg={12} sm={12} sx={{ padding: "0.5rem" }}>
               <TextField
                 required
                 id="outlined-required"
@@ -48,7 +48,7 @@ function Contact() {
                 fullWidth
               />
             </Grid>
-            <Grid lg={12} sm={12} sx={{ padding: "0.5rem" }}>
+            <Grid item lg={12} sm={12} sx={{ padding: "0.5rem" }}>
               <TextField
                 required
                 id="outlined-required"
@@ -56,7 +56,7 @@ function Contact() {
                 fullWidth
               />
             </Grid>
-            <Grid lg={12} sm={12} sx={{ padding: "0.5rem" }}>
+            <Grid item lg={12} sm={12} sx={{ padding: "0.5rem" }}>
               <TextField
                 id="outlined-multiline-static"
                 placeholder="Please enter your message here"
@@ -68,6 +68,7 @@ function Contact() {
               />
             </Grid>
             <Grid
+              item
               lg={12}
               sm={12}
               sx={{
