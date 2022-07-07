@@ -1,7 +1,6 @@
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 import blogData from "./blogData.json";
 import { instance } from "../../configs/api";
