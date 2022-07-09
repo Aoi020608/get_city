@@ -27,9 +27,9 @@ export default function App() {
           <Route path="/" element={<MainFeaturedPost />} />
           <Route path="/works" element={<Works />} />
           <Route path="/aboutme" element={<Aboutme />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:blogId" element={<BlogDetail />} />
-          <Route path="/blog/edit" element={<EditBlog />} />
+          {/* <Route path="/blog" element={<Blog />} /> */}
+          {/* <Route path="/blog/:blogId" element={<BlogDetail />} />
+          <Route path="/blog/edit" element={<EditBlog />} /> */}
         </Routes>
       </main>
       <Footer

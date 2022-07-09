@@ -59,9 +59,9 @@ export default function Header() {
               <Typography variant="button" color="textSecondary">
                 <Link to="/works">WORKS</Link>
               </Typography>
-              <Typography variant="button" color="textSecondary">
+              {/* <Typography variant="button" color="textSecondary">
                 <Link to="/blog">BLOG</Link>
-              </Typography>
+              </Typography> */}
               <Typography variant="button" color="textSecondary">
                 <Link to="/aboutme">ABOUT ME</Link>
               </Typography>
