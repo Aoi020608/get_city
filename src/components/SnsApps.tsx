@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { FaMedium, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "3rem",
       width: "100%",
       padding: "0 20rem",
+    },
+    button: {
+      fontSize: "3rem",
     },
   })
 );
@@ -45,17 +48,17 @@ const snses = [
 
 export default function SnsApps() {
   const classes = useStyles();
+
+  const handleClick = (link: string) => {
+    window.open(link, "_blank")?.focus();
+  };
+
   return (
     <Grid className={classes.loginContainer}>
       {snses.map((sns) => (
-        <a
-          href={sns.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          key={sns.id}
-        >
-          {sns.name}
-        </a>
+        <div key={sns.id} onClick={() => handleClick(sns.link)}>
+          <Button style={{ fontSize: "3rem" }}>{sns.icon}</Button>
+        </div>
       ))}
     </Grid>
   );
