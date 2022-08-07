@@ -1,6 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { FaMedium, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -10,44 +11,48 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: "space-around",
       fontSize: "3rem",
       width: "100%",
-      backgroundColor: "#000",
       padding: "0 20rem",
     },
   })
 );
 
+const snses = [
+  {
+    id: 1,
+    link: "https://medium.com/@aoi01",
+    icon: <FaMedium />,
+  },
+  {
+    id: 2,
+    link: "https://www.linkedin.com/in/aoi-kurokawa-aa1744204/",
+    icon: <FaLinkedin />,
+  },
+  {
+    id: 3,
+    link: "https://github.com/Aoi1011",
+    icon: <FaGithub />,
+  },
+  {
+    id: 4,
+    link: "https://twitter.com/aoi18_en",
+    icon: <FaTwitter />,
+  },
+];
+
 export default function SnsApps() {
   const classes = useStyles();
   return (
     <Grid className={classes.loginContainer}>
-      <a
-        href="https://medium.com/@aoi01"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaMedium />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/aoi-kurokawa-aa1744204/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin />
-      </a>
-      <a
-        href="https://github.com/Aoi1011"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaGithub />
-      </a>
-      <a
-        href="https://twitter.com/aoi18_en"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaTwitter />
-      </a>
+      {snses.map((sns) => (
+        <a
+          href={sns.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={sns.id}
+        >
+          {sns.icon}
+        </a>
+      ))}
     </Grid>
   );
 }
