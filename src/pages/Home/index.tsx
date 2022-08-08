@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {},
     color: "#000000",
   },
+  gridContainer: {
+    width: "100%",
+  },
   button: {
     padding: "1rem 6rem",
   },
@@ -36,7 +39,7 @@ const MainFeaturedPost: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
         <Grid container className={classes.mainFeaturedPostContent}>
-          <Grid>
+          <Grid className={classes.gridContainer}>
             <Typography
               component="h1"
               variant="h3"
@@ -47,7 +50,9 @@ const MainFeaturedPost: React.FC = () => {
               Aoi Kurokawa
             </Typography>
           </Grid>
-          <Divider />
+          <Grid className={classes.gridContainer}>
+            <Divider />
+          </Grid>
           <Typography
             variant="h5"
             color="inherit"
