@@ -11,7 +11,9 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: "space-around",
       fontSize: "3rem",
       width: "100%",
-      padding: "0 20rem",
+      [theme.breakpoints.up("sm")]: {
+        padding: "0 20rem",
+      },
     },
   })
 );
