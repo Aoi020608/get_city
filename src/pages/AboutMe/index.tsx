@@ -9,8 +9,6 @@ import Markdown from "markdown-to-jsx";
 const theme = createTheme();
 
 const md = `
-# About Me
-
 ### Aoi Kurokawa
 
 *Born in 1996. I am currently on my senior year at the University of FPT studying Computer Science. I like to develop something so I have joined some projects as an intern.*

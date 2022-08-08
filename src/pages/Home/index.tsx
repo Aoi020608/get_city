@@ -91,16 +91,18 @@ const MainFeaturedPost: React.FC = () => {
             style={{ padding: "1rem" }}
           >
             You can find my resume
-            <Link
-              to={"/aboutme"}
+            <a
+              href="https://github.com/Aoi1011/resume/blob/main/AOI%20KUROKAWA.pdf"
+              target="_blank"
               style={{
                 paddingLeft: "0.5rem",
                 textDecoration: "underline",
                 color: "#000000",
               }}
+              rel="noreferrer"
             >
               here.
-            </Link>
+            </a>
           </Typography>
         </Grid>
         <SnsApps />
