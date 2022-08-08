@@ -9,10 +9,10 @@
   },
   {
     "id": "2",
-    "image": "https://github.com/zwecken/DTrust-webapp/blob/main/src/img/logo.jpg?raw=true",
-    "title": "DTrust",
-    "description": "I joined the project that can create smart contract.",
-    "githubLink": "https://github.com/zwecken/DTrust",
+    "image": "https://github.com/Aoi1011/nft-drop-starter-project/raw/main/app/src/assets/wallpaper.png",
+    "title": "Solana NFT Drop Project",
+    "description": "I developed NFT program by using candy machine by Metaplex.",
+    "githubLink": "https://github.com/Aoi1011/nft-drop-starter-project",
     "detailLink": ""
   }
 ]

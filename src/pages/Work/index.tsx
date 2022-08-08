@@ -11,12 +11,15 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FaGithub } from "react-icons/fa";
 import { BiDetail } from "react-icons/bi";
 import { Link } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import data from "../../worksData.json";
 
 const theme = createTheme();
 
 export default function Works() {
+  const navigate = useNavigate();
+
   return (
     <ThemeProvider theme={theme}>
       <Container sx={{ py: 8 }} maxWidth="lg">
@@ -32,7 +35,7 @@ export default function Works() {
               >
                 <CardMedia
                   component="img"
-                  sx={{}}
+                  sx={{ height: "293px" }}
                   image={d.image}
                   alt="random"
                 />
@@ -61,6 +64,11 @@ export default function Works() {
               </Card>
             </Grid>
           ))}
+        </Grid>
+        <Grid
+          sx={{ paddingTop: "5rem", display: "flex", justifyContent: "center" }}
+        >
+          <Button onClick={() => navigate("/")}>Back to home</Button>
         </Grid>
       </Container>
     </ThemeProvider>
