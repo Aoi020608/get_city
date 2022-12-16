@@ -54,16 +54,32 @@ const MainFeaturedPost: React.FC = () => {
             <Divider />
           </Grid>
           <Typography
+            variant="h4"
+            color="inherit"
+            paragraph
+            style={{ padding: "1rem", textAlign: "center" }}
+          >
+            Hi, I'm Aoi. An adventurous traveler, and dog-lover.
+          </Typography>
+          <Typography
             variant="h5"
             color="inherit"
             paragraph
             style={{ padding: "1rem" }}
           >
-            Hi, I'm Aoi. I'm currently a student, studying computer science. I
-            am interested in crypto, blockchain, web3.0. I have joined some
-            projects such as watch NFT project, video NFT project. My task was
-            mainly developing front-end using React.js and developing smart
-            contract.
+            I'm currently a student, studying computer science. I also go by
+            Full Stack Developer, Front-End Developer, or Back-End Developer.
+          </Typography>
+          <Typography
+            variant="h5"
+            color="inherit"
+            paragraph
+            style={{ padding: "1rem" }}
+          >
+            For my personal interest, I like blockchain, web3.0 technologies. I
+            have joined some projects such as watch NFT project, video NFT
+            project. My task was mainly developing user interface by front-end
+            frameworks such as ReactJS, NextJS.
           </Typography>
           <Typography
             variant="h5"
